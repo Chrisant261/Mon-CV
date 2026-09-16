@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — RASOLONOMENJANAHARY Guyno Chrisant</title>
+<meta name="description" content="CV académique de RASOLONOMENJANAHARY Guyno Chrisant - Enseignant-Chercheur en Mathématiques, Informatique et Énergétique">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #0f3460;
+  --highlight: #e94560;
+  --gold: #f4a261;
+  --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #2d3436;
+  line-height: 1.6;
+  padding-top: 80px;
+  min-height: 100vh;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed; top: 0; left: 0; width: 100%; height: 70px;
+  background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 5%; z-index: 1000;
+  transition: all 0.3s ease;
+}
+.navbar.scrolled { height: 60px; box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 1.4em; font-weight: 800;
+  background: var(--gradient-1);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+.nav-logo img {
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 2px solid var(--highlight);
+  object-fit: cover;
+}
+.nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+.nav-links a {
+  text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.9em;
+  position: relative; padding: 5px 0; transition: color 0.3s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+  background: var(--highlight); transition: width 0.3s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--highlight); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+/* DROPDOWN */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn {
+  background: var(--gradient-1); color: white; padding: 8px 18px; font-size: 0.85em;
+  font-weight: 600; border: none; border-radius: 30px; cursor: pointer;
+  display: flex; align-items: center; gap: 6px; transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+.dropbtn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); }
+.dropdown-content {
+  display: none; position: absolute; right: 0; top: 120%; background: white;
+  min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 12px;
+  overflow: hidden; z-index: 1001; animation: fadeInDown 0.3s ease;
+}
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.dropdown-content a {
+  color: var(--primary); padding: 11px 18px; text-decoration: none;
+  display: flex; align-items: center; gap: 10px; font-size: 0.85em;
+  transition: background 0.3s, color 0.3s; border-bottom: 1px solid #f0f0f0;
+}
+.dropdown-content a:last-child { border-bottom: none; }
+.dropdown-content a:hover { background: #f8f9fa; color: var(--highlight); }
+.dropdown-content a i { width: 18px; text-align: center; color: var(--highlight); }
+.dropdown:hover .dropdown-content { display: block; }
+
+.lang-toggle {
+  background: transparent; border: 2px solid var(--primary); color: var(--primary);
+  padding: 6px 14px; border-radius: 30px; cursor: pointer; font-weight: 600;
+  font-size: 0.8em; transition: all 0.3s; font-family: 'Poppins', sans-serif; margin-left: 12px;
+}
+.lang-toggle:hover { background: var(--primary); color: white; }
+
+/* PARTICLES */
+.particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+.particle { position: absolute; width: 10px; height: 10px; background: rgba(255,255,255,0.3); border-radius: 50%; animation: float 20s infinite; }
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; }
+.particle:nth-child(2) { left: 30%; animation-delay: 2s; animation-duration: 18s; }
+.particle:nth-child(3) { left: 50%; animation-delay: 4s; animation-duration: 22s; }
+.particle:nth-child(4) { left: 70%; animation-delay: 1s; animation-duration: 16s; }
+.particle:nth-child(5) { left: 90%; animation-delay: 3s; animation-duration: 20s; }
+@keyframes float { 0% { transform: translateY(100vh) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100px) rotate(720deg); opacity: 0; } }
+
+/* MAIN CONTAINER */
+.cv-container {
+  max-width: 1200px; margin: 20px auto; background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(20px); box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 360px 1fr;
+  position: relative; z-index: 1; animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes slideUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+
+/* SIDEBAR */
+.sidebar { background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%); color: #fff; padding: 35px 22px; position: relative; overflow: hidden; }
+.sidebar::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(233,69,96,0.1) 0%, transparent 70%); animation: rotate 20s linear infinite; }
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.profile-photo {
+  width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 20px;
+  border: 4px solid var(--highlight); overflow: hidden; position: relative; z-index: 1;
+  animation: pulse 3s ease-in-out infinite; box-shadow: 0 10px 30px rgba(233,69,96,0.4);
+}
+.profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes pulse { 0%, 100% { box-shadow: 0 10px 30px rgba(233,69,96,0.4); } 50% { box-shadow: 0 10px 40px rgba(233,69,96,0.7); } }
+
+.sidebar h2 {
+  font-size: 1.05em; text-transform: uppercase; border-bottom: 2px solid var(--highlight);
+  padding-bottom: 6px; margin-bottom: 12px; margin-top: 25px; color: var(--highlight);
+  letter-spacing: 1px; position: relative; z-index: 1;
+}
+.sidebar h2:first-of-type { margin-top: 0; }
+.sidebar p, .sidebar li { font-size: 0.88em; margin-bottom: 7px; color: #e0e0e0; position: relative; z-index: 1; }
+.sidebar ul { list-style-type: none; }
+.sidebar ul li { padding-left: 18px; position: relative; transition: transform 0.3s; }
+.sidebar ul li:hover { transform: translateX(5px); }
+.sidebar ul li::before { content: "▸"; position: absolute; left: 0; color: var(--highlight); font-weight: bold; }
+
+.contact-info p { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; position: relative; z-index: 1; font-size: 0.85em; }
+.contact-info i { color: var(--highlight); width: 18px; text-align: center; margin-top: 3px; flex-shrink: 0; }
+.contact-info a { color: var(--gold); text-decoration: none; transition: color 0.3s; word-break: break-all; }
+.contact-info a:hover { color: var(--highlight); }
+
+.university-logos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; position: relative; z-index: 1; }
+.logo-item {
+  background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px;
+  padding: 10px; text-align: center; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;
+}
+.logo-item:hover { transform: translateY(-4px) scale(1.05); background: rgba(255,255,255,0.2); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+.logo-item img { width: 45px; height: 45px; object-fit: contain; margin-bottom: 4px; background: white; border-radius: 6px; padding: 2px; }
+.logo-item span { font-size: 0.68em; color: #ccc; display: block; }
+
+/* MAIN CONTENT */
+.main-content { padding: 35px; position: relative; }
+.header { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid transparent; border-image: var(--gradient-1) 1; position: relative; }
+.header::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 3px; background: var(--gradient-1); animation: expandLine 2s ease forwards 0.5s; }
+@keyframes expandLine { to { width: 100%; } }
+.header h1 {
+  font-size: 2em; font-weight: 800; background: var(--gradient-1);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; animation: fadeInLeft 1s ease;
+}
+@keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+.header h3 { font-size: 1em; color: var(--accent); font-weight: 500; animation: fadeInLeft 1s ease 0.3s both; }
+.header .subtitle { font-size: 0.9em; color: #666; margin-top: 5px; font-style: italic; }
+
+/* ACCORDION */
+.section { margin-bottom: 18px; opacity: 0; transform: translateY(30px); animation: fadeInUp 0.8s ease forwards; }
+.section:nth-child(2) { animation-delay: 0.15s; } .section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.45s; } .section:nth-child(5) { animation-delay: 0.6s; }
+.section:nth-child(6) { animation-delay: 0.75s; } .section:nth-child(7) { animation-delay: 0.9s; }
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+.accordion-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 8px 0; user-select: none; transition: transform 0.2s; }
+.accordion-header:hover { transform: translateX(5px); }
+.section-title { font-size: 1.25em; font-weight: 700; color: var(--primary); text-transform: uppercase; display: flex; align-items: center; gap: 10px; margin: 0; }
+.section-title i { color: var(--highlight); font-size: 1.1em; }
+.accordion-icon { color: var(--highlight); font-size: 1.1em; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+.accordion-header.active .accordion-icon { transform: rotate(180deg); }
+.accordion-content { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin 0.3s ease; }
+.accordion-content.active { max-height: 5000px; opacity: 1; margin-bottom: 15px; }
+
+.item {
+  margin-bottom: 18px; padding: 16px;
+  background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+  border-radius: 12px; border-left: 4px solid var(--highlight);
+  transition: all 0.3s; position: relative; overflow: hidden;
+}
+.item::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: left 0.5s; }
+.item:hover::before { left: 100%; }
+.item:hover { transform: translateX(6px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-left-color: var(--gold); }
+
+.item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; gap: 8px; }
+.item-title { font-weight: 600; font-size: 1em; color: var(--primary); }
+.item-date { font-weight: 600; color: #fff; background: var(--gradient-1); padding: 3px 12px; border-radius: 20px; font-size: 0.8em; white-space: nowrap; }
+.item-subtitle { font-style: italic; color: #666; margin-bottom: 4px; font-size: 0.9em; }
+.item-desc { font-size: 0.9em; color: #555; line-height: 1.5; margin-bottom: 6px; }
+.item-desc strong { color: var(--primary); }
+.tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { background: rgba(102,126,234,0.15); color: var(--accent); padding: 2px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 500; }
+.links-row { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+.links-row a { color: var(--highlight); text-decoration: none; font-size: 0.82em; font-weight: 500; padding: 3px 10px; border: 1px solid var(--highlight); border-radius: 15px; transition: all 0.3s; }
+.links-row a:hover { background: var(--highlight); color: white; }
+
+/* FOOTER */
+.footer {
+  margin-top: 30px; font-size: 0.85em; color: #888; text-align: center;
+  padding: 18px; background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+  border-radius: 12px; border: 1px solid rgba(102,126,234,0.2);
+}
+.footer i { color: var(--highlight); margin-right: 5px; }
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%;
+  background: var(--gradient-1); color: white; border: none; cursor: pointer; font-size: 1.2em;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
+
+/* Language Visibility */
+body.lang-fr .en { display: none !important; }
+body.lang-en .fr { display: none !important; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cv-container { grid-template-columns: 1fr; }
+  .sidebar { padding: 25px 18px; } .main-content { padding: 25px 18px; }
+  .header h1 { font-size: 1.5em; }
+  .nav-links { display: none; }
+  .navbar { padding: 0 3%; }
+  .back-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+}
+
+/* Print styles */
+@media print {
+  body { background: white; padding-top: 0; }
+  .navbar, .particles, .back-to-top, .lang-toggle, .dropdown { display: none !important; }
+  .cv-container { box-shadow: none; margin: 0; }
+  .accordion-content { max-height: none !important; opacity: 1 !important; }
+}
+</style>
+</head>
+<body class="lang-fr">
+
+<div class="particles">
+  <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <img src="20260903_090527.jpg" alt="R.G. Chrisant" onerror="this.style.display='none'">
+    <span>R.G.C.</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#profil" class="nav-link active"><span class="fr">Profil</span><span class="en">Profile</span></a></li>
+    <li><a href="#formation" class="nav-link"><span class="fr">Formation</span><span class="en">Education</span></a></li>
+    <li><a href="#carriere" class="nav-link"><span class="fr">Carrière</span><span class="en">Career</span></a></li>
+    <li><a href="#publications" class="nav-link"><span class="fr">Publications</span><span class="en">Publications</span></a></li>
+    <li><a href="#competences" class="nav-link"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
+    <li><a href="#contact" class="nav-link"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
+  </ul>
+  <div style="display: flex; align-items: center;">
+    <div class="dropdown">
+      <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+        <span class="fr">Menu</span><span class="en">Menu</span> <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="dropdown-content" role="menu">
+        <a href="#" id="expandAll" role="menuitem"><i class="fas fa-expand-alt"></i> <span class="fr">Tout ouvrir</span><span class="en">Expand all</span></a>
+        <a href="#" id="collapseAll" role="menuitem"><i class="fas fa-compress-alt"></i> <span class="fr">Tout fermer</span><span class="en">Collapse all</span></a>
+        <a href="https://orcid.org/0000-0001-5947-3855" target="_blank" rel="noopener" role="menuitem"><i class="fab fa-orcid"></i> ORCID</a>
+        <a href="https://theses.fr/s434589" target="_blank" rel="noopener" role="menuitem"><i class="fas fa-graduation-cap"></i> <span class="fr">Thèse (theses.fr)</span><span class="en">Thesis (theses.fr)</span></a>
+        <a href="https://www.linkedin.com/in/chrisant-guyno-rasolonomenjanahary-386964386" target="_blank" rel="noopener" role="menuitem"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:chrisant.rasolonomenjanahary-guyno@univ-reunion.fr" role="menuitem"><i class="fas fa-envelope"></i> <span class="fr">Me contacter</span><span class="en">Contact Me</span></a>
+      </div>
+    </div>
+    <button class="lang-toggle" id="langBtn" aria-label="Changer de langue">
+      <span class="fr">🇬 EN</span>
+      <span class="en">🇫 FR</span>
+    </button>
+  </div>
+</nav>
+
+<div class="cv-container" id="profil">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="profile-photo">
+      <img src="20260903_090527.jpg" alt="Chrisant RASOLONOMENJANAHARY GUYNO" onerror="this.src='https://via.placeholder.com/160x160/667eea/ffffff?text=RGC'">
+    </div>
+
+    <h2><i class="fas fa-address-card"></i> <span class="fr">Contact</span><span class="en">Contact</span></h2>
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> 20 Avenue Hippolyte Foucque, 97490 Saint-Denis, La Réunion</p>
+      <p><i class="fas fa-phone"></i> +262 692 87 00 15</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:chrisant.rasolonomenjanahary-guyno@univ-reunion.fr">chrisant.rasolonomenjanahary-guyno@univ-reunion.fr</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:r.guy.chris@gmail.com">r.guy.chris@gmail.com</a></p>
+      <p><i class="fab fa-orcid"></i> <a href="https://orcid.org/0000-0001-5947-3855" target="_blank" rel="noopener">0000-0001-5947-3855</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/chrisant-guyno-rasolonomenjanahary-386964386" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+    
+    <!-- QR Code dans Contact -->
+    <div style="text-align: center; margin-top: 20px; position: relative; z-index: 1;">
+      <img src="qr.png" alt="QR Code Contact" style="width: 120px; height: 120px; border-radius: 12px; border: 3px solid var(--highlight); background: white; padding: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" onerror="this.style.display='none'">
+      <p style="font-size: 0.75em; margin-top: 8px; color: #bbb; font-weight: 500;">
+        <span class="fr">Scannez pour sauvegarder le contact</span>
+        <span class="en">Scan to save contact</span>
+      </p>
+    </div>
+
+    <h2><i class="fas fa-university"></i> <span class="fr">Affiliations</span><span class="en">Affiliations</span></h2>
+    <div class="university-logos">
+      <a href="https://www.univ-reunion.fr/" target="_blank" rel="noopener" class="logo-item" style="text-decoration:none;color:inherit;">
+        <img src="Univreunio.png" alt="Université de La Réunion" onerror="this.src='https://via.placeholder.com/45x45/667eea/ffffff?text=UR'">
+        <span>Univ. Réunion</span>
+      </a>
+      <a href="http://www.univ-toamasina.mg/" target="_blank" rel="noopener" class="logo-item" style="text-decoration:none;color:inherit;">
+        <img src="Iugm.jpg" alt="Université de Toamasina" onerror="this.src='https://via.placeholder.com/45x45/764ba2/ffffff?text=UT'">
+        <span>Univ. Toamasina</span>
+      </a>
+      <a href="https://www.mahajanga-univ.mg/" target="_blank" rel="noopener" class="logo-item" style="text-decoration:none;color:inherit;">
+        <img src="Umg.png" alt="Université de Mahajanga" onerror="this.src='https://via.placeholder.com/45x45/f093fb/ffffff?text=UM'">
+        <span>Univ. Mahajanga</span>
+      </a>
+      <a href="https://www.energylab.re/" target="_blank" rel="noopener" class="logo-item" style="text-decoration:none;color:inherit;">
+        <!-- Logo ENERGY-Lab avec fallback SVG intégré -->
+        <img src="energylab.png" 
+             alt="ENERGY-Lab" 
+             onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23e94560%22 rx=%2210%22/><text x=%2250%22 y=%2258%22 font-family=%22Arial%22 font-size=%2232%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>EL</text><text x=%2250%22 y=%2282%22 font-family=%22Arial%22 font-size=%2212%22 fill=%22white%22 text-anchor=%22middle%22>ENERGY</text></svg>';">
+        <span>ENERGY-Lab</span>
+      </a>
+    </div>
+
+    <h2><i class="fas fa-brain"></i> <span class="fr">Axes de recherche</span><span class="en">Research Axes</span></h2>
+    <ul>
+      <li class="fr">Mesures d'association (MGK)</li><li class="en">Association measures (MGK)</li>
+      <li class="fr">Informatique médicale</li><li class="en">Medical informatics</li>
+      <li class="fr">Énergies renouvelables</li><li class="en">Renewable energies</li>
+      <li class="fr">Systèmes énergétiques insulaires</li><li class="en">Island energy systems</li>
+    </ul>
+
+    <h2><i class="fas fa-laptop-code"></i> <span class="fr">Informatique</span><span class="en">IT Skills</span></h2>
+    <ul>
+      <li class="fr">Programmation : R, Python, LaTeX</li><li class="en">Programming: R, Python, LaTeX</li>
+      <li class="fr">Logiciels Office</li><li class="en">Office software</li>
+      <li class="fr">Maintenance informatique</li><li class="en">IT maintenance</li>
+    </ul>
+
+    <h2><i class="fas fa-language"></i> <span class="fr">Langues</span><span class="en">Languages</span></h2>
+    <ul>
+      <li class="fr"><strong>Français :</strong> Avancé (B2)</li><li class="en"><strong>French:</strong> Advanced (B2)</li>
+      <li class="fr"><strong>Anglais :</strong> Intermédiaire</li><li class="en"><strong>English:</strong> Intermediate</li>
+    </ul>
+
+    <h2><i class="fas fa-hands-helping"></i> <span class="fr">Vie associative</span><span class="en">Community</span></h2>
+    <ul>
+      <li class="fr">Vice-Président, Jeunes Catholiques Mahajanga-be (2018-2021)</li>
+      <li class="en">Vice-President, Young Catholics Mahajanga-be (2018-2021)</li>
+      <li class="fr">Membre actif, Association MENOM</li>
+      <li class="en">Active member, MENOM Association</li>
+    </ul>
+
+    <h2><i class="fas fa-heart"></i> <span class="fr">Centres d'intérêt</span><span class="en">Interests</span></h2>
+    <ul>
+      <li> Football, 🏀 Basketball</li>
+      <li class="fr">🎮 Jeux, 🎵 Musique, 🎬 Cinéma</li>
+      <li class="en">🎮 Games, 🎵 Music, 🎬 Cinema</li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <div class="header">
+      <h1>RASOLONOMENJANAHARY Guyno Chrisant</h1>
+      <h3 class="fr">Enseignant-Chercheur • Mathématiques, Informatique & Énergétique</h3>
+      <h3 class="en">Lecturer-Researcher • Mathematics, Computer Science & Energy</h3>
+      <div class="subtitle fr">La Réunion • Madagascar — Océan Indien | ORCID : 0000-0001-5947-3855 | ENERGY-Lab | 3 publications</div>
+      <div class="subtitle en">Reunion Island • Madagascar — Indian Ocean | ORCID : 0000-0001-5947-3855 | ENERGY-Lab | 3 publications</div>
+    </div>
+
+    <!-- PROFIL -->
+    <div class="section scroll-reveal" id="profil-section">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-user"></i><span class="fr">Profil</span><span class="en">Profile</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-desc fr">
+            Enseignant à l'Institut Universitaire de Gestion et de Management (IUGM) de l'Université de Mahajanga depuis 2018. Je mène deux parcours doctoraux complémentaires articulés autour de l'Océan Indien :
+            <br><br>
+            <strong>🔢 Mathématiques & Informatique</strong> — Université de Toamasina (depuis janv. 2020) : fouille de données, mesures d'association MGK, aide à la décision en santé publique.
+            <br><br>
+            <strong>⚡ Physique Énergétique</strong> — Université de La Réunion (depuis oct. 2025) : modélisation probabiliste du potentiel énergétique renouvelable, systèmes hybrides insulaires, applications à La Réunion et Madagascar.
+            <br><br>
+            Mes travaux visent à renforcer la résilience énergétique et sanitaire des territoires insulaires de l'Océan Indien par des approches quantitatives et probabilistes.
+          </div>
+          <div class="item-desc en">
+            Lecturer at the University Institute of Management and Business (IUGM) of the University of Mahajanga since 2018. I pursue two complementary doctoral paths focused on the Indian Ocean:
+            <br><br>
+            <strong>🔢 Mathematics & Computer Science</strong> — University of Toamasina (since Jan. 2020): data mining, MGK association measures, decision support in public health.
+            <br><br>
+            <strong>⚡ Energy Physics</strong> — University of La Réunion (since Oct. 2025): probabilistic modeling of renewable energy potential, island hybrid systems, applications to Reunion Island and Madagascar.
+            <br><br>
+            My work aims to strengthen the energy and health resilience of Indian Ocean island territories through quantitative and probabilistic approaches.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMATION -->
+    <div class="section scroll-reveal" id="formation">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i><span class="fr">Formation & Recherche doctorale</span><span class="en">Education & Doctoral Research</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Doctorat — Physique Énergétique</span>
+            <span class="item-title en">PhD — Energy Physics</span>
+            <span class="item-date">01/10/2025 → <span class="fr">En cours</span><span class="en">Ongoing</span></span>
+          </div>
+          <div class="item-subtitle fr">Université de La Réunion • École doctorale : Sciences, Technologies et Santé • LABORATOIRE : ENERGY-Lab (UR 4079)</div>
+          <div class="item-subtitle en">University of La Réunion • Doctoral School: Sciences, Technologies and Health • LAB: ENERGY-Lab (UR 4079)</div>
+          <div class="item-desc fr">
+            <strong>Directeurs :</strong> Pr. Béatrice Morel (directrice adjointe ENERGY-Lab) & Pr. Eric Jean Roy Sambatra
+            <br><br>
+            <strong>Sujet :</strong> Modélisation probabiliste du potentiel énergétique renouvelable à long terme pour l'optimisation des systèmes hybrides insulaires — applications à La Réunion et Madagascar.
+            <br><br>
+            <strong>Méthodologie :</strong> Données multi-sources (CMIP6, ERA5, BRIO, SWIO-Energy), copules, chaînes de Markov, simulations stochastiques. Complémentarité solaire/éolienne.
+          </div>
+          <div class="item-desc en">
+            <strong>Supervisors:</strong> Pr. Béatrice Morel (deputy director ENERGY-Lab) & Pr. Eric Jean Roy Sambatra
+            <br><br>
+            <strong>Topic:</strong> Probabilistic modeling of long-term renewable energy potential for the optimization of island hybrid systems — applications to Reunion Island and Madagascar.
+            <br><br>
+            <strong>Methodology:</strong> Multi-source data (CMIP6, ERA5, BRIO, SWIO-Energy), copulas, Markov chains, stochastic simulations. Solar/wind complementarity.
+          </div>
+          <div class="tags">
+            <span class="tag fr">Énergies renouvelables</span><span class="tag en">Renewable energies</span>
+            <span class="tag fr">Modélisation probabiliste</span><span class="tag en">Probabilistic modeling</span>
+            <span class="tag fr">Systèmes hybrides</span><span class="tag en">Hybrid systems</span>
+            <span class="tag fr">Océan Indien</span><span class="tag en">Indian Ocean</span>
+          </div>
+          <div class="links-row">
+            <a href="https://theses.fr/s434589" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> <span class="fr">Fiche these.fr</span><span class="en">theses.fr page</span></a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Doctorat — Mathématiques & Informatique</span>
+            <span class="item-title en">PhD — Mathematics & Computer Science</span>
+            <span class="item-date">Janv. 2020 → <span class="fr">En cours</span><span class="en">Ongoing</span></span>
+          </div>
+          <div class="item-subtitle fr">Université de Toamasina • École doctorale : « Science, Culture, Société et Développement »</div>
+          <div class="item-subtitle en">University of Toamasina • Doctoral School: "Science, Culture, Society and Development"</div>
+          <div class="item-desc fr">
+            <strong>Thématique :</strong> Mesures d'implication, règles d'association multi-prémisses et aide à la décision en santé publique. Comparaison MGK vs Facteur de Certitude MYCIN.
+          </div>
+          <div class="item-desc en">
+            <strong>Topic:</strong> Implication measures, multi-premise association rules and decision support in public health. Comparison MGK vs MYCIN Certainty Factor.
+          </div>
+          <div class="tags">
+            <span class="tag fr">Fouille de données</span><span class="tag en">Data mining</span>
+            <span class="tag">Mesure MGK</span>
+            <span class="tag fr">Systèmes experts</span><span class="tag en">Expert systems</span>
+            <span class="tag fr">Santé publique</span><span class="tag en">Public health</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Master — Mathématiques & Informatique</span>
+            <span class="item-title en">Master's — Mathematics & Computer Science</span>
+            <span class="item-date">2012 → 2017</span>
+          </div>
+          <div class="item-subtitle">ENSET / Université d'Antsiranana</div>
+          <div class="item-desc fr">Analyse, logique, algorithmique, programmation et statistiques</div>
+          <div class="item-desc en">Analysis, logic, algorithmics, programming and statistics</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Licence — Génie Mathématique</span>
+            <span class="item-title en">Bachelor's — Mathematical Engineering</span>
+            <span class="item-date">2015</span>
+          </div>
+          <div class="item-subtitle">ENSET d'Antsiranana</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Baccalauréat Série C</span>
+            <span class="item-title en">High School Diploma Series C</span>
+            <span class="item-date">2012</span>
+          </div>
+          <div class="item-subtitle">Notre Dame Mahajanga</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARRIERE -->
+    <div class="section scroll-reveal" id="carriere">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i><span class="fr">Parcours professionnel</span><span class="en">Professional Career</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Chargé de cours en Statistiques — IOSTM</span>
+            <span class="item-title en">Lecturer in Statistics — IOSTM</span>
+            <span class="item-date">2020 → <span class="fr">Présent</span><span class="en">Present</span></span>
+          </div>
+          <div class="item-subtitle fr">Institut d'Océanographie et des Sciences de la Terre (Diététique)</div>
+          <div class="item-subtitle en">Institute of Oceanography and Earth Sciences (Dietetics)</div>
+          <div class="item-desc fr">Enseignement des statistiques appliquées aux étudiants en diététique.</div>
+          <div class="item-desc en">Teaching applied statistics to dietetics students.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Chargé de cours en Statistiques — École de Pharmacie</span>
+            <span class="item-title en">Lecturer in Statistics — School of Pharmacy</span>
+            <span class="item-date">2020 → <span class="fr">Présent</span><span class="en">Present</span></span>
+          </div>
+          <div class="item-subtitle">Université de Mahajanga</div>
+          <div class="item-desc fr">Enseignement des statistiques aux étudiants en pharmacie.</div>
+          <div class="item-desc en">Teaching statistics to pharmacy students.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Chargé de cours en Mathématiques & Statistiques Probabilistes — IUGM</span>
+            <span class="item-title en">Lecturer in Mathematics & Probabilistic Statistics — IUGM</span>
+            <span class="item-date">2018 → <span class="fr">Présent</span><span class="en">Present</span></span>
+          </div>
+          <div class="item-subtitle fr">Institut Universitaire de Gestion et de Management, Mahajanga</div>
+          <div class="item-subtitle en">University Institute of Management and Business, Mahajanga</div>
+          <div class="item-desc fr">Enseignement des mathématiques, des probabilités et des statistiques aux étudiants en gestion.</div>
+          <div class="item-desc en">Teaching mathematics, probability and statistics to management students.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Proviseur — Lycée Mahatsinjo RN4</span>
+            <span class="item-title en">Headmaster — Lycée Mahatsinjo RN4</span>
+            <span class="item-date">2022 → 2024</span>
+          </div>
+          <div class="item-subtitle">Madagascar</div>
+          <div class="item-desc fr">Direction et gestion administrative et pédagogique de l'établissement secondaire.</div>
+          <div class="item-desc en">Administrative and pedagogical management of the secondary school.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Superviseur en Mathématiques — CNTEMAD</span>
+            <span class="item-title en">Mathematics Supervisor — CNTEMAD</span>
+            <span class="item-date">2019</span>
+          </div>
+          <div class="item-subtitle fr">Centre National de Télé-Enseignement de Madagascar</div>
+          <div class="item-subtitle en">National Center for Distance Learning of Madagascar</div>
+          <div class="item-desc fr">Encadrement et supervision des étudiants en mathématiques dans le cadre de l'enseignement à distance.</div>
+          <div class="item-desc en">Supervision of mathematics students in distance learning.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Professeur d'Informatique — Lycée Catholique Saint Jean</span>
+            <span class="item-title en">Computer Science Teacher — Lycée Catholique Saint Jean</span>
+            <span class="item-date">2018</span>
+          </div>
+          <div class="item-subtitle">Antsiranana</div>
+          <div class="item-desc fr">Enseignement de l'informatique au lycée.</div>
+          <div class="item-desc en">Teaching computer science at high school.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Stages pédagogiques & administratifs</span>
+            <span class="item-title en">Pedagogical & Administrative Internships</span>
+            <span class="item-date">2016 → 2018</span>
+          </div>
+          <div class="item-subtitle">Antsiranana</div>
+          <div class="item-desc fr">
+            • Stage pédagogique en Mathématiques en 2nde — Lycée Annexe (2018)<br>
+            • Stage en administration scolaire — Lycée Catholique Saint Jean (2018)<br>
+            • Stage pédagogique en Mathématiques en 6ème (2016)
+          </div>
+          <div class="item-desc en">
+            • Pedagogical internship in Mathematics (10th grade) — Lycée Annexe (2018)<br>
+            • School administration internship — Lycée Catholique Saint Jean (2018)<br>
+            • Pedagogical internship in Mathematics (6th grade) (2016)
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Pair Éducateur — PSI Madagascar</span>
+            <span class="item-title en">Peer Educator — PSI Madagascar</span>
+            <span class="item-date">2016 → 2017</span>
+          </div>
+          <div class="item-subtitle">Antsiranana</div>
+          <div class="item-desc fr">Éducation par les pairs dans le cadre de la prévention et de la sensibilisation.</div>
+          <div class="item-desc en">Peer education for prevention and awareness.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DISTINCTIONS -->
+    <div class="section scroll-reveal" id="distinctions">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-trophy"></i><span class="fr">Distinctions & Manifestations scientifiques</span><span class="en">Awards & Scientific Events</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">🏆 3ème Prix — Doctoriales d'Antananarivo</span>
+            <span class="item-title en">🏆 3rd Prize — Doctoriales of Antananarivo</span>
+            <span class="item-date">2024</span>
+          </div>
+          <div class="item-subtitle">Université d'Antananarivo</div>
+          <div class="item-desc fr">
+            <strong>Thème :</strong> « Research and Innovation at the Heart of Development »<br>
+            <strong>Communication :</strong> « Use of Mathematics in Decision-Making »<br><br>
+            Lauréat du 3ème prix parmi les doctorants participants, récompensant la qualité de la recherche et la clarté de l'exposé.
+          </div>
+          <div class="item-desc en">
+            <strong>Theme:</strong> "Research and Innovation at the Heart of Development"<br>
+            <strong>Presentation:</strong> "Use of Mathematics in Decision-Making"<br><br>
+            3rd prize winner among participating PhD students, rewarding research quality and presentation clarity.
+          </div>
+          <div class="tags">
+            <span class="tag">🏆 3ème Prix</span>
+            <span class="tag fr">Compétition scientifique</span><span class="tag en">Scientific competition</span>
+            <span class="tag">Antananarivo</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">1ère Conférence Internationale sur l'Informatique (ICI)</span>
+            <span class="item-title en">1st International Conference on Informatics (ICI)</span>
+            <span class="item-date">2022</span>
+          </div>
+          <!-- "Antananarivo" retiré ici -->
+          <div class="item-desc fr">
+            <strong>Communication orale :</strong> « Extension of the Certainty Factor Measure with MGK on Several Premises »<br><br>
+            Présentation des résultats de recherche sur l'extension de la mesure MGK comparée au Facteur de Certitude, lors de la première édition de cette conférence internationale.
+          </div>
+          <div class="item-desc en">
+            <strong>Oral presentation:</strong> "Extension of the Certainty Factor Measure with MGK on Several Premises"<br><br>
+            Presentation of research results on the extension of the MGK measure compared to the Certainty Factor, at the first edition of this international conference.
+          </div>
+          <div class="tags">
+            <span class="tag fr">Conférence internationale</span><span class="tag en">International conference</span>
+            <span class="tag fr">Communication orale</span><span class="tag en">Oral presentation</span>
+            <span class="tag">Mesure MGK</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">« Ma Thèse en 180 Seconds »</span>
+            <span class="item-title en">« My Thesis in 180 Seconds »</span>
+            <span class="item-date">2024</span>
+          </div>
+          <div class="item-desc fr">
+            <strong>Présentation :</strong> « Probabilistic Extension of the MGK Association Rule Measure »<br><br>
+            Exercice de synthèse visant à présenter les travaux de thèse en 3 minutes devant un jury pluridisciplinaire.
+          </div>
+          <div class="item-desc en">
+            <strong>Presentation:</strong> "Probabilistic Extension of the MGK Association Rule Measure"<br><br>
+            Exercise to present thesis work in 3 minutes before a multidisciplinary jury.
+          </div>
+          <div class="tags">
+            <span class="tag fr">Vulgarisation scientifique</span><span class="tag en">Scientific outreach</span>
+            <span class="tag fr">Communication rapide</span><span class="tag en">Quick presentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMATIONS SCIENTIFIQUES -->
+    <div class="section scroll-reveal" id="formations-sci">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-certificate"></i><span class="fr">Formations & Écoles scientifiques</span><span class="en">Training & Scientific Schools</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">CIMPA — Blockchain, Théorie Mathématique et Applications</span>
+            <span class="item-date">2024</span>
+          </div>
+          <div class="item-subtitle">International Center for Pure and Applied Mathematics, Antsiranana</div>
+          <div class="item-desc fr">Formation avancée sur les fondements mathématiques de la blockchain et leurs applications.</div>
+          <div class="item-desc en">Advanced training on the mathematical foundations of blockchain and their applications.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">CIMPA — Modélisation Probabiliste en Épidémiologie</span>
+            <span class="item-title en">CIMPA — Probabilistic Modeling in Epidemiology</span>
+            <span class="item-date">2022</span>
+          </div>
+          <div class="item-subtitle">International Center for Pure and Applied Mathematics, Fianarantsoa</div>
+          <div class="item-desc fr">Formation sur la modélisation probabiliste et statistique appliquée à l'épidémiologie et à l'environnement.</div>
+          <div class="item-desc en">Training on probabilistic and statistical modeling applied to epidemiology and environment.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">École Mathématique Africaine (EMA) — Réseaux de Neurones</span>
+            <span class="item-title en">African Mathematical School (EMA) — Neural Networks</span>
+            <span class="item-date">2019</span>
+          </div>
+          <div class="item-subtitle">Antsiranana</div>
+          <div class="item-desc fr">Formation aux réseaux de neurones et à leurs applications mathématiques.</div>
+          <div class="item-desc en">Training on neural networks and their mathematical applications.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Bâtiments et Assainissement Urbain</span>
+            <span class="item-title en">Buildings and Urban Sanitation</span>
+            <span class="item-date">2018</span>
+          </div>
+          <div class="item-desc fr">Formation technique sur les bâtiments et l'assainissement en milieu urbain.</div>
+          <div class="item-desc en">Technical training on buildings and urban sanitation.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title fr">Droit de la femme</span>
+            <span class="item-title en">Women's Rights</span>
+            <span class="item-date">2015</span>
+          </div>
+          <div class="item-desc fr">Formation sur les droits des femmes et l'égalité des genres.</div>
+          <div class="item-desc en">Training on women's rights and gender equality.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div class="section scroll-reveal" id="publications">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-file-alt"></i><span class="fr">Publications scientifiques (3)</span><span class="en">Scientific Publications (3)</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Why not MGK-measure Instead McNemar Measure?</span>
+            <span class="item-date">11 Jan. 2025</span>
+          </div>
+          <div class="item-subtitle fr">Avec AMBEONDAHY & Pr. André TOTOHASINA • Journal of Data Science Modelling and Techniques (JDMT), Vol. 2</div>
+          <div class="item-subtitle en">With AMBEONDAHY & Pr. André TOTOHASINA • Journal of Data Science Modelling and Techniques (JDMT), Vol. 2</div>
+          <div class="item-desc fr">
+            <strong>Résumé :</strong> Analyse comparative approfondie entre MGK et McNemar. Démonstration que McNemar est trompeuse ; MGK différencie précisément les 5 situations de référence : -1 (incompatibilité) à +1 (implication logique).
+          </div>
+          <div class="item-desc en">
+            <strong>Abstract:</strong> In-depth comparative analysis between MGK and McNemar. Demonstration that McNemar is misleading; MGK precisely differentiates the 5 reference situations: -1 (incompatibility) to +1 (logical implication).
+          </div>
+          <div class="tags">
+            <span class="tag">Mesure MGK</span><span class="tag">Mesure McNemar</span>
+            <span class="tag fr">Validation</span><span class="tag en">Validation</span>
+            <span class="tag fr">Comparaison</span><span class="tag en">Comparison</span>
+          </div>
+          <div class="links-row">
+            <a href="https://doi.org/10.17303/jdmt.2025.2.101" target="_blank" rel="noopener">DOI: 10.17303/jdmt.2025.2.101</a>
+            <a href="https://jscholaronline.org/full-text/JDMT/2_101/Why-not-MGK-measure-Instead-McNemar-Measure.php" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> <span class="fr">Lien JDMT</span><span class="en">JDMT link</span></a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Improved Extension of MGK on Several Premisses Simplified</span>
+            <span class="item-date">Mai 2023</span>
+          </div>
+          <div class="item-subtitle fr">Avec AMBEONDAHY & Pr. André TOTOHASINA • International Journal of Innovative Science and Research Technology (IJISRT), Vol. 8, n°5</div>
+          <div class="item-subtitle en">With AMBEONDAHY & Pr. André TOTOHASINA • International Journal of Innovative Science and Research Technology (IJISRT), Vol. 8, No. 5</div>
+          <div class="item-desc fr">
+            <strong>Résumé :</strong> Extension améliorée de la mesure MGK aux règles d'association à plusieurs prémisses. Comparaison avec le Facteur de Certitude MYCIN. Application sur données épidémiologiques (COVID-19).
+          </div>
+          <div class="item-desc en">
+            <strong>Abstract:</strong> Improved extension of the MGK measure to multi-premise association rules. Comparison with MYCIN Certainty Factor. Application on epidemiological data (COVID-19).
+          </div>
+          <div class="tags">
+            <span class="tag fr">Fouille de données</span><span class="tag en">Data mining</span>
+            <span class="tag">Mesure MGK</span>
+            <span class="tag fr">Règles d'association</span><span class="tag en">Association rules</span>
+            <span class="tag fr">Épidémiologie</span><span class="tag en">Epidemiology</span>
+          </div>
+          <div class="links-row">
+            <a href="https://doi.org/10.5281/ZENODO.8008440" target="_blank" rel="noopener">DOI: 10.5281/ZENODO.8008440</a>
+            <a href="https://bit.ly/3TmGbDi" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Google Scholar</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Extension of the Certainty Factor Measure with MGK on Several Premises</span>
+            <span class="item-date">2021</span>
+          </div>
+          <div class="item-subtitle fr">Avec AMBEONDAHY & Pr. André TOTOHASINA • American Journal of Sciences and Engineering Research</div>
+          <div class="item-subtitle en">With AMBEONDAHY & Pr. André TOTOHASINA • American Journal of Sciences and Engineering Research</div>
+          <div class="item-desc fr">
+            <strong>Résumé :</strong> Étude comparative entre MGK et le Facteur de Certitude MYCIN. Démonstration des propriétés supérieures de MGK et extension aux itemsets fréquents multiples.
+          </div>
+          <div class="item-desc en">
+            <strong>Abstract:</strong> Comparative study between MGK and MYCIN Certainty Factor. Demonstration of MGK's superior properties and extension to multiple frequent itemsets.
+          </div>
+          <div class="tags">
+            <span class="tag fr">Mesures de certitude</span><span class="tag en">Certainty measures</span>
+            <span class="tag fr">Systèmes experts</span><span class="tag en">Expert systems</span>
+            <span class="tag fr">Itemsets fréquents</span><span class="tag en">Frequent itemsets</span>
+            <span class="tag fr">Extraction de connaissances</span><span class="tag en">Knowledge extraction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AFFILIATIONS -->
+    <div class="section scroll-reveal" id="affiliations">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-network-wired"></i><span class="fr">Affiliations & Réseau</span><span class="en">Affiliations & Network</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-desc fr">
+            <strong>•</strong> ENERGY-Lab (UR 4079) — Université de La Réunion (depuis oct. 2025)<br>
+            <strong>•</strong> École Doctorale « Science, Culture, Société et Développement » — Université de Toamasina<br>
+            <strong>•</strong> Institut Universitaire de Gestion et de Management (IUGM) — Université de Mahajanga<br>
+            <strong>•</strong> ISSTM (Institut Supérieur en Sciences et Technologies de Mahajanga) — Partenariat<br>
+            <strong>•</strong> ENSET / Université d'Antsiranana — Coopération scientifique
+          </div>
+          <div class="item-desc en">
+            <strong>•</strong> ENERGY-Lab (UR 4079) — University of La Réunion (since Oct. 2025)<br>
+            <strong>•</strong> Doctoral School "Science, Culture, Society and Development" — University of Toamasina<br>
+            <strong>•</strong> University Institute of Management and Business (IUGM) — University of Mahajanga<br>
+            <strong>•</strong> ISSTM (Higher Institute of Sciences and Technologies of Mahajanga) — Partnership<br>
+            <strong>•</strong> ENSET / University of Antsiranana — Scientific cooperation
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title fr" style="margin-bottom: 10px;">Co-auteurs et directeurs :</div>
+          <div class="item-title en" style="margin-bottom: 10px;">Co-authors and supervisors:</div>
+          <div class="item-desc">
+            • <strong>Pr. Béatrice Morel</strong> — ENERGY-Lab, La Réunion<br>
+            • <strong>Pr. Eric Jean Roy Sambatra</strong> — Université de La Réunion<br>
+            • <strong>AMBEONDAHY</strong> — ISSTM / Mahajanga<br>
+            • <strong>Pr. André TOTOHASINA</strong> — ENSET / Antsiranana
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPETENCES -->
+    <div class="section scroll-reveal" id="competences">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-cogs"></i><span class="fr">Compétences</span><span class="en">Skills</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-title fr" style="margin-bottom: 10px;"> Compétences techniques</div>
+          <div class="item-title en" style="margin-bottom: 10px;">🎯 Technical Skills</div>
+          <div class="item-desc">
+            Mathématiques & Statistiques • Modélisation stochastique • Fouille de données & MGK • Modélisation énergétique • Programmation (R, Python, LaTeX) • Enseignement supérieur
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title fr" style="margin-bottom: 10px;">🤝 Compétences transversales</div>
+          <div class="item-title en" style="margin-bottom: 10px;">🤝 Transversal Skills</div>
+          <div class="item-desc fr">
+            <strong>Développement global</strong> — Vision intégrée du développement territorial et durable<br>
+            <strong>Leadership</strong> — Expérience de direction d'établissement et gestion d'équipes<br>
+            <strong>Prévention & Santé</strong> — Méthodes préventives et curatives pour la toxicomanie<br>
+            <strong>Communication</strong> — Techniques de communication orale et écrite, vulgarisation scientifique
+          </div>
+          <div class="item-desc en">
+            <strong>Global development</strong> — Integrated vision of territorial and sustainable development<br>
+            <strong>Leadership</strong> — Experience in school management and team leadership<br>
+            <strong>Prevention & Health</strong> — Preventive and curative methods for drug addiction<br>
+            <strong>Communication</strong> — Oral and written communication techniques, scientific outreach
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section scroll-reveal" id="contact">
+      <div class="accordion-header active">
+        <h2 class="section-title"><i class="fas fa-envelope"></i><span class="fr">Me contacter</span><span class="en">Contact Me</span></h2>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content active">
+        <div class="item">
+          <div class="item-desc fr">Pour collaboration scientifique, co-encadrement ou échange académique :</div>
+          <div class="item-desc en">For scientific collaboration, co-supervision or academic exchange:</div>
+          <div class="links-row" style="margin-top: 15px;">
+            <a href="mailto:chrisant.rasolonomenjanahary-guyno@univ-reunion.fr"><i class="fas fa-envelope"></i> Email professionnel</a>
+            <a href="https://orcid.org/0000-0001-5947-3855" target="_blank" rel="noopener"><i class="fab fa-orcid"></i> ORCID</a>
+            <a href="https://theses.fr/s434589" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Thèse La Réunion</a>
+            <a href="https://doi.org/10.5281/ZENODO.8008440" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Publication</a>
+            <a href="https://www.linkedin.com/in/chrisant-guyno-rasolonomenjanahary-386964386" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER : déclaration supprimée, date de modification conservée -->
+    <div class="footer">
+      <span class="fr"><i class="fas fa-calendar-alt"></i> © 2026 RASOLONOMENJANAHARY Guyno Chrisant — Mis à jour le 15 septembre 2026</span>
+      <span class="en"><i class="fas fa-calendar-alt"></i> © 2026 RASOLONOMENJANAHARY Guyno Chrisant — Updated on September 15, 2026</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bouton Retour en haut -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+// Language toggle
+const langBtn = document.getElementById('langBtn');
+langBtn.addEventListener('click', () => {
+  const body = document.body;
+  if (body.classList.contains('lang-fr')) {
+    body.classList.remove('lang-fr');
+    body.classList.add('lang-en');
+    localStorage.setItem('preferredLang', 'en');
+  } else {
+    body.classList.remove('lang-en');
+    body.classList.add('lang-fr');
+    localStorage.setItem('preferredLang', 'fr');
+  }
+});
+
+// Restaurer la langue préférée
+const savedLang = localStorage.getItem('preferredLang');
+if (savedLang === 'en') {
+  document.body.classList.remove('lang-fr');
+  document.body.classList.add('lang-en');
+}
+
+// Accordion logic
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    const isActive = content.classList.contains('active');
+    if (isActive) {
+      content.style.maxHeight = null;
+      content.classList.remove('active');
+      header.classList.remove('active');
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.classList.add('active');
+      header.classList.add('active');
+    }
+  });
+});
+
+// Expand / Collapse all
+document.getElementById('expandAll').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    const content = header.nextElementSibling;
+    if (!content.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.classList.add('active');
+      header.classList.add('active');
+    }
+  });
+});
+
+document.getElementById('collapseAll').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    const content = header.nextElementSibling;
+    content.style.maxHeight = null;
+    content.classList.remove('active');
+    header.classList.remove('active');
+  });
+});
+
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) { navbar.classList.add('scrolled'); } else { navbar.classList.remove('scrolled'); }
+});
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('.section, #profil');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 150) current = section.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').includes(current)) link.classList.add('active');
+  });
+});
+
+// Back to top button
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { backToTopBtn.classList.add('visible'); } else { backToTopBtn.classList.remove('visible'); }
+});
+backToTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+// Parallax particles
+document.addEventListener('mousemove', (e) => {
+  const particles = document.querySelectorAll('.particle');
+  const x = e.clientX / window.innerWidth;
+  const y = e.clientY / window.innerHeight;
+  particles.forEach((p, i) => {
+    const speed = (i + 1) * 2;
+    p.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+  });
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      const offset = 80;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
